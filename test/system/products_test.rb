@@ -5,7 +5,7 @@ class ProductsTest < ApplicationSystemTestCase
     visit root_url # "/"
     # save_and_open_screenshot
     assert_selector "h1", text: "Awesome Products"
-    assert_selector ".card-product", count: 5
+    assert_selector ".card-product", count: Product.count
   end
 
   test "lets a signed in user create a new product" do
